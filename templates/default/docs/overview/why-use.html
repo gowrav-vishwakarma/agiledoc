@@ -1,0 +1,215 @@
+<div class="atk-wrapper">
+				<h1>Overview &gt; Why Use Agile Toolkit?</h1>
+
+<h2>What Challenges Is Agile Toolkit Designed To Solve?</h2>
+
+<p>Agile Toolkit is a new kind of PHP framework focused on easing the development of rich-client AJAX applications.</p>
+
+<h3>The challenge of developing rich AJAX applications</h3>
+
+<p>The increasing importance of desktop-like AJAX interfaces is a game-changer for PHP application developers:</p>
+
+<ul>
+<li>Rich interfaces require complex HTML5 and CSS3</li>
+<li>We need non-trivial JavaScript in the client to enforce business rules, handle events and bind data structures to the interface</li>
+<li>We need to move data between the database, our PHP server-side objects and our JavaScript in the client</li>
+<li>For security, we need to double-check client-side business rules on the server</li>
+<li>And we have to tie all this together with AJAX calls and responses.</li>
+</ul>
+
+<p><img title="The Web Technology Challenge" alt="The Web Technology Challenge" src="<?template?>images/dia-web-technologies.png<?/template?>" style="" class="" id="agiletoolkit_org_doc_view">
+</p>
+
+<h3>The limitations of mainstream solutions</h3>
+
+<p>The PHP community offers a wide choice of well-engineered MVC frameworks, but even the best can only offer a partial solution to the many challenges of developing rich interfaces for data-centric applications.</p>
+
+<p>With some frameworks you create your AJAX data management system though code generation or big, monolithic libraries. This can offer a rapid solution for straightforward requirements. But your application design is constrained by the features built into the generator or library, and you can end up adapting more complex projects to the framework rather than the framework to the project.</p>
+
+<p>For more complex requirements your main option is a multi-framework development stack. Typically this involves a PHP MVC framework on the server-side, a JavaScript user interface framework such as JQuery UI on the client-side, and perhaps a CSS framework such as Bootstrap to ease the styling headache. But now you're working with two or three complex and overlapping frameworks in different languages, and you're still having to figure out your own way to tie them together with AJAX. It's a challenge to keep things <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> and avoid duplicating effort on the client and the server. The learning curve is steep. And the resulting code can be hard to test and tricky to change as requirements evolve.</p>
+
+<h3>The need for a fresh approach</h3>
+
+<p>Neither of these solutions met the needs of our busy web development house. So we set out to build a simpler, faster and more reliable approach to developing rich web applications.</p>
+
+<p>Though our experience of over 100 commercial projects, Agile Toolkit has evolved into a mature, production-ready development tool.</p>
+
+<h2>What Unique Benefits Does Agile Toolkit Deliver?</h2>
+
+<p>In the crowded world of PHP frameworks any new project should justify its existence by delivering distinctive and compelling benefits.</p>
+
+<h3>Bringing the ease of desktop development to the web</h3>
+
+<p>Agile Toolkit borrows proven principles from GUI frameworks such as Cocoa, QT and .Net to bring the convenience and power of desktop development to PHP developers building AJAX applications.</p>
+
+<ul>
+<li>The framework provides a consistent, professional look and feel for your application, based on standard UI components such as buttons, menus, forms and fields</li>
+<li>The look and feel is easy to skin or customize</li>
+<li>Actual implementation of a UI component (HTML template, JavaScript widgets, events and CSS) is abstracted and knowledge of the underlying nuts and bolts is not necessary to build your application</li>
+<li>In general everything is done in PHP, from Models and advanced data queries to View layout, logic and event binding</li>
+<li>Components are modular and independent &ndash; for example placing multiple CRUD components on the same page or embedding them inside your custom component is simple and intuitive</li>
+<li>UI logic is cleanly separated from business logic by design</li>
+<li>And your data structures move seamlessly between your data store and your AJAX interface.</li>
+</ul>
+
+<p><img title="Simplifying Rich Application Development" alt="Simplifying Rich Application Development" src="/agiletoolkit.org/public/images/doc/overview/dia-simplifying-development.png" style="" class="" id="agiletoolkit_org_doc_view_9">
+</p>
+
+<h3>How is Agile Toolkit different?</h3>
+
+<p>We call our solution a Toolkit rather than a framework because the focus is on rapid development with reusable interface and business components. And we call it Agile because the components are designed to adapt easily and reliably as agile requirements evolve.</p>
+
+<p>Compared to conventional PHP MVC frameworks, you'll be working with:</p>
+
+<ul>
+<li><strong>A fresh approach to Views</strong>: building a rich user experience by snapping together flexible, event-aware View components using only PHP on the server (<a href="/TODO">see more...</a>) </li>
+<li><strong>A fresh approach to Models</strong>: building your business logic in Models that bind directly to your View components and adapt robustly as requirements evolve (<a href="/TODO">see more...</a>) </li>
+<li><strong>A fresh approach to Addons</strong>: plugging in additional functionality from an ecosystem of Addons that take full advantage of the AJAX, event handling and styling features of the Toolkit Core (<a href="/TODO">see more...</a>).</li>
+</ul>
+
+<p>Agile Toolkit offers a comprehensive approach to rich application development, so there's only one way to do things &ndash; the right way. The architectural decisions and client-side plumbing are handled for you, enabling you to focus on the functionality of your application from the get-go.</p>
+
+<h3>The payoff</h3>
+
+<p>So what is the payoff for you, the developer? Quite simply, AJAX applications that are:</p>
+
+<ul>
+<li>Easier to build</li>
+<li>Easier to test, and</li>
+<li>Easier to change.</li>
+</ul>
+
+<h3>Example: a full-featured CRUD UI in 2 lines of code</h3>
+
+<p>To demonstrate the agility of the Agile Toolkit approach, here's how you'd build a fully AJAXed <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> application.  Let's start with the vanilla built-in CRUD component:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<?Example?>
+$this->add('View_Info',null,'Demo')->set('Hi');
+<?/Example?>
+
+
+
+</div>
+
+<p>That's it &ndash; our page is now displaying an attractive and functional CRUD interface, and enforcing any rules set in our <code>Employee</code> Model.</p>
+
+<p>In Agile Toolkit CRUD is just another component, with many powerful and flexible features built-in &ndash; for example:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<div class="span6">	
+<div class="example" data-short="romaninsh_documenting_view_example_2" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_2_ex">
+  <div class="label">SOURCE</div>
+  <div class="actions"><a href="#romaninsh_documenting_view_example_2" name="romaninsh_documenting_view_example_2"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
+  <div class="syntaxhighlighter  " id="highlighter_402715"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_2_1" name="romaninsh_documenting_view_example_2_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_2_2" name="romaninsh_documenting_view_example_2_2"><div class="line number2 index1 alt1">2</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="variable">$crud</code><code class="plain">-&gt;addPaginator(5);</code></div><div class="line number2 index1 alt1"><code class="variable">$crud</code><code class="plain">-&gt;addQuickSearch(</code><code class="keyword">array</code><code class="plain">(</code><code class="string">'name'</code><code class="plain">));</code></div></div></td></tr></tbody></table></div>
+</div>
+</div>
+
+
+
+</div>
+
+<p>Components are easy to extend and customize. CRUD is a composite View relying on Grid, Form and Button Views and we can interact with those subcomponents directly:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<div class="span6">	
+<div class="example" data-short="romaninsh_documenting_view_example_3" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_3_ex">
+  <div class="label">SOURCE</div>
+  <div class="actions"><a href="#romaninsh_documenting_view_example_3" name="romaninsh_documenting_view_example_3"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
+  <div class="syntaxhighlighter  " id="highlighter_419467"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_3_1" name="romaninsh_documenting_view_example_3_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_3_2" name="romaninsh_documenting_view_example_3_2"><div class="line number2 index1 alt1">2</div></a><a href="#romaninsh_documenting_view_example_3_3" name="romaninsh_documenting_view_example_3_3"><div class="line number3 index2 alt2">3</div></a><a href="#romaninsh_documenting_view_example_3_4" name="romaninsh_documenting_view_example_3_4"><div class="line number4 index3 alt1">4</div></a><a href="#romaninsh_documenting_view_example_3_5" name="romaninsh_documenting_view_example_3_5"><div class="line number5 index4 alt2">5</div></a><a href="#romaninsh_documenting_view_example_3_6" name="romaninsh_documenting_view_example_3_6"><div class="line number6 index5 alt1">6</div></a><a href="#romaninsh_documenting_view_example_3_7" name="romaninsh_documenting_view_example_3_7"><div class="line number7 index6 alt2">7</div></a><a href="#romaninsh_documenting_view_example_3_8" name="romaninsh_documenting_view_example_3_8"><div class="line number8 index7 alt1">8</div></a><a href="#romaninsh_documenting_view_example_3_9" name="romaninsh_documenting_view_example_3_9"><div class="line number9 index8 alt2">9</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="variable">$crud</code> <code class="plain">= </code><code class="variable">$this</code><code class="plain">-&gt;add(</code><code class="string">'CRUD'</code><code class="plain">);</code></div><div class="line number2 index1 alt1"><code class="variable">$crud</code><code class="plain">-&gt;setModel(</code><code class="string">'Book'</code><code class="plain">);</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$crud</code><code class="plain">-&gt;grid) {</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$crud</code><code class="plain">-&gt;grid-&gt;addButton(</code><code class="string">'Populate Data'</code><code class="plain">)-&gt;isClicked()) {</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$crud</code><code class="plain">-&gt;grid-&gt;model-&gt;populateData();</code></div><div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$crud</code><code class="plain">-&gt;grid-&gt;js()-&gt;reload()-&gt;execute();</code></div><div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number9 index8 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</div>
+</div>
+
+
+
+</div>
+
+<p>Now we have a button which uses some AJAX to repopulate the CRUD form with a default data set. As you can see, there's no need to get your hands dirty with the AJAX internals. The actual implementation of <code>populateData()</code> is part of the business logic and resides in <code>Model_Book</code>.</p>
+
+<p>Let's add a relational join:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<div class="span6">	
+<div class="example" data-short="romaninsh_documenting_view_example_4" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_4_ex">
+  <div class="label">SOURCE</div>
+  <div class="actions"><a href="#romaninsh_documenting_view_example_4" name="romaninsh_documenting_view_example_4"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
+  <div class="syntaxhighlighter  " id="highlighter_914065"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_4_1" name="romaninsh_documenting_view_example_4_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_4_2" name="romaninsh_documenting_view_example_4_2"><div class="line number2 index1 alt1">2</div></a><a href="#romaninsh_documenting_view_example_4_3" name="romaninsh_documenting_view_example_4_3"><div class="line number3 index2 alt2">3</div></a><a href="#romaninsh_documenting_view_example_4_4" name="romaninsh_documenting_view_example_4_4"><div class="line number4 index3 alt1">4</div></a><a href="#romaninsh_documenting_view_example_4_5" name="romaninsh_documenting_view_example_4_5"><div class="line number5 index4 alt2">5</div></a><a href="#romaninsh_documenting_view_example_4_6" name="romaninsh_documenting_view_example_4_6"><div class="line number6 index5 alt1">6</div></a><a href="#romaninsh_documenting_view_example_4_7" name="romaninsh_documenting_view_example_4_7"><div class="line number7 index6 alt2">7</div></a><a href="#romaninsh_documenting_view_example_4_8" name="romaninsh_documenting_view_example_4_8"><div class="line number8 index7 alt1">8</div></a><a href="#romaninsh_documenting_view_example_4_9" name="romaninsh_documenting_view_example_4_9"><div class="line number9 index8 alt2">9</div></a><a href="#romaninsh_documenting_view_example_4_10" name="romaninsh_documenting_view_example_4_10"><div class="line number10 index9 alt1">10</div></a><a href="#romaninsh_documenting_view_example_4_11" name="romaninsh_documenting_view_example_4_11"><div class="line number11 index10 alt2">11</div></a><a href="#romaninsh_documenting_view_example_4_12" name="romaninsh_documenting_view_example_4_12"><div class="line number12 index11 alt1">12</div></a><a href="#romaninsh_documenting_view_example_4_13" name="romaninsh_documenting_view_example_4_13"><div class="line number13 index12 alt2">13</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="variable">$book</code> <code class="plain">= </code><code class="variable">$this</code><code class="plain">-&gt;add(</code><code class="string">'Model_Book'</code><code class="plain">);</code></div><div class="line number2 index1 alt1"><code class="variable">$author</code> <code class="plain">= </code><code class="variable">$book</code><code class="plain">-&gt;leftJoin(</code><code class="string">'author'</code><code class="plain">);</code></div><div class="line number3 index2 alt2"><code class="variable">$author</code><code class="plain">-&gt;addField(</code><code class="string">'author_name'</code><code class="plain">,</code><code class="string">'name'</code><code class="plain">)-&gt;editable(false);</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="variable">$crud</code> <code class="plain">= </code><code class="variable">$this</code><code class="plain">-&gt;add(</code><code class="string">'CRUD'</code><code class="plain">);</code></div><div class="line number6 index5 alt1"><code class="variable">$crud</code><code class="plain">-&gt;setModel(</code><code class="variable">$book</code><code class="plain">);</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$crud</code><code class="plain">-&gt;grid) {</code></div><div class="line number9 index8 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$crud</code><code class="plain">-&gt;grid-&gt;addButton(</code><code class="string">'Populate Data'</code><code class="plain">)-&gt;isClicked()) {</code></div><div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$crud</code><code class="plain">-&gt;grid-&gt;model-&gt;populateData();</code></div><div class="line number11 index10 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$crud</code><code class="plain">-&gt;grid-&gt;js()-&gt;reload()-&gt;execute();</code></div><div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number13 index12 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</div>
+</div>
+
+
+
+</div>
+
+<p>Our CRUD component is displaying data from two tables. But in Agile Toolkit it would be better style to encapsulate our join in a new Model:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<div class="span6">	
+<div class="example" data-short="romaninsh_documenting_view_example_5" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_5_ex">
+  <div class="label">SOURCE</div>
+  <div class="actions"><a href="#romaninsh_documenting_view_example_5" name="romaninsh_documenting_view_example_5"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
+  <div class="syntaxhighlighter  " id="highlighter_753570"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_5_1" name="romaninsh_documenting_view_example_5_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_5_2" name="romaninsh_documenting_view_example_5_2"><div class="line number2 index1 alt1">2</div></a><a href="#romaninsh_documenting_view_example_5_3" name="romaninsh_documenting_view_example_5_3"><div class="line number3 index2 alt2">3</div></a><a href="#romaninsh_documenting_view_example_5_4" name="romaninsh_documenting_view_example_5_4"><div class="line number4 index3 alt1">4</div></a><a href="#romaninsh_documenting_view_example_5_5" name="romaninsh_documenting_view_example_5_5"><div class="line number5 index4 alt2">5</div></a><a href="#romaninsh_documenting_view_example_5_6" name="romaninsh_documenting_view_example_5_6"><div class="line number6 index5 alt1">6</div></a><a href="#romaninsh_documenting_view_example_5_7" name="romaninsh_documenting_view_example_5_7"><div class="line number7 index6 alt2">7</div></a><a href="#romaninsh_documenting_view_example_5_8" name="romaninsh_documenting_view_example_5_8"><div class="line number8 index7 alt1">8</div></a><a href="#romaninsh_documenting_view_example_5_9" name="romaninsh_documenting_view_example_5_9"><div class="line number9 index8 alt2">9</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="keyword">class</code> <code class="plain">Model_BookWithAuthor </code><code class="keyword">extends</code> <code class="plain">Model_Book</code></div><div class="line number2 index1 alt1"><code class="plain">{</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">function</code> <code class="plain">init()</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">parent::init();</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$author</code> <code class="plain">= </code><code class="variable">$this</code><code class="plain">-&gt;leftJoin(</code><code class="string">'author'</code><code class="plain">);</code></div><div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$author</code><code class="plain">-&gt;addField(</code><code class="string">'author_name'</code><code class="plain">,</code><code class="string">'name'</code><code class="plain">)-&gt;editable(false);</code></div><div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number9 index8 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</div>
+</div>
+
+
+
+</div>
+
+<p>Models in Agile Toolkit are unusually powerful and flexible &ndash; this is merely a first glimpse of how they work.</p>
+
+<p>Finally, you might want your CRUD with the 'Populate Data' button as a reusable component, so let's move it into another new class:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<div class="span6">	
+<div class="example" data-short="romaninsh_documenting_view_example_6" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_6_ex">
+  <div class="label">SOURCE</div>
+  <div class="actions"><a href="#romaninsh_documenting_view_example_6" name="romaninsh_documenting_view_example_6"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
+  <div class="syntaxhighlighter  " id="highlighter_975185"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_6_1" name="romaninsh_documenting_view_example_6_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_6_2" name="romaninsh_documenting_view_example_6_2"><div class="line number2 index1 alt1">2</div></a><a href="#romaninsh_documenting_view_example_6_3" name="romaninsh_documenting_view_example_6_3"><div class="line number3 index2 alt2">3</div></a><a href="#romaninsh_documenting_view_example_6_4" name="romaninsh_documenting_view_example_6_4"><div class="line number4 index3 alt1">4</div></a><a href="#romaninsh_documenting_view_example_6_5" name="romaninsh_documenting_view_example_6_5"><div class="line number5 index4 alt2">5</div></a><a href="#romaninsh_documenting_view_example_6_6" name="romaninsh_documenting_view_example_6_6"><div class="line number6 index5 alt1">6</div></a><a href="#romaninsh_documenting_view_example_6_7" name="romaninsh_documenting_view_example_6_7"><div class="line number7 index6 alt2">7</div></a><a href="#romaninsh_documenting_view_example_6_8" name="romaninsh_documenting_view_example_6_8"><div class="line number8 index7 alt1">8</div></a><a href="#romaninsh_documenting_view_example_6_9" name="romaninsh_documenting_view_example_6_9"><div class="line number9 index8 alt2">9</div></a><a href="#romaninsh_documenting_view_example_6_10" name="romaninsh_documenting_view_example_6_10"><div class="line number10 index9 alt1">10</div></a><a href="#romaninsh_documenting_view_example_6_11" name="romaninsh_documenting_view_example_6_11"><div class="line number11 index10 alt2">11</div></a><a href="#romaninsh_documenting_view_example_6_12" name="romaninsh_documenting_view_example_6_12"><div class="line number12 index11 alt1">12</div></a><a href="#romaninsh_documenting_view_example_6_13" name="romaninsh_documenting_view_example_6_13"><div class="line number13 index12 alt2">13</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="keyword">class</code> <code class="plain">MyCRUD </code><code class="keyword">extends</code> <code class="plain">CRUD</code></div><div class="line number2 index1 alt1"><code class="plain">{</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">function</code> <code class="plain">render()</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$this</code><code class="plain">-&gt;grid &amp;&amp; </code><code class="variable">$this</code><code class="plain">-&gt;grid-&gt;model-&gt;hasMethod(</code><code class="string">'populateData'</code><code class="plain">))) {</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$this</code><code class="plain">-&gt;grid-&gt;addButton(</code><code class="string">'Populate Data'</code><code class="plain">)-&gt;isClicked()) {</code></div><div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$this</code><code class="plain">-&gt;grid-&gt;model-&gt;populateData();</code></div><div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$this</code><code class="plain">-&gt;grid-&gt;js()-&gt;reload()-&gt;execute();</code></div><div class="line number9 index8 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number11 index10 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">parent::render();</code></div><div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number13 index12 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</div>
+</div>
+
+
+
+</div>
+
+<p>So now we can use our two new components with just 2 lines of code:</p>
+
+<style>.gutter a { text-decoration: none; }</style>
+<div class="atk-row ">
+<div class="span6">	
+<div class="example" data-short="romaninsh_documenting_view_example_7" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_7_ex">
+  <div class="label">SOURCE</div>
+  <div class="actions"><a href="#romaninsh_documenting_view_example_7" name="romaninsh_documenting_view_example_7"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
+  <div class="syntaxhighlighter  " id="highlighter_889200"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_7_1" name="romaninsh_documenting_view_example_7_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_7_2" name="romaninsh_documenting_view_example_7_2"><div class="line number2 index1 alt1">2</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="variable">$crud</code> <code class="plain">= </code><code class="variable">$this</code><code class="plain">-&gt;add(</code><code class="string">'MyCRUD'</code><code class="plain">);</code></div><div class="line number2 index1 alt1"><code class="variable">$crud</code><code class="plain">-&gt;setModel(</code><code class="string">'BookWithAuthor'</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</div>
+</div>
+
+
+
+</div>
+
+<p>With other solutions similar CRUD functionality might require dozens, even hundreds of lines of code. So Agile Toolkit offers the potential to accelerate your CRUD development by a factor of ten or more, without resorting to inflexible libraries or code generation.</p>
+
+<p>This example gives you a foretaste of some of the most powerful features of Agile Toolkit:</p>
+
+<ul>
+<li>You can easily enhance existing components and even interact with the subcomponents they're built from</li>
+<li>Code in Models and Views can be quickly refactored to encapsulate new functionality without disrupting existing code and tests</li>
+<li>You can develop and test custom components separately, then combine them into a UI of any complexity</li>
+<li>Components benefit from the built-in CSS styling, providing you with an attractive interface with no additional work.</li>
+</ul>
+
+<h2>Can I Use Agile Toolkit With My Existing Code?</h2>
+
+<p>We recognise that many developers will be coming to Agile Toolkit with a significant investment in other MVC frameworks, or in content management frameworks such as WordPress, Drupal and Joomla.</p>
+
+<p>If you want to add sophisticated data handling to your legacy code, Agile Toolkit is designed to play well with these other frameworks. For example you might use the Agile Toolkit UI features for just a couple of pages inside your CodeIgniter project, or you can use the unique features of the Agile Toolkit ORM to build the REST interface for your JavaScript frontend. Commonly, developers will use Agile Toolkit to modernise the backend/admin area of an existing project. You'll find more details <a href="/TODO">here</a>.</p>
+
+        	</div>
