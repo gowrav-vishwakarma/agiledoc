@@ -1,0 +1,27 @@
+kfjug hdkfg hdkf gjhdlkfhgd
+fgdfg dsfgdf sgd fgd<br/>dfgd
+
+<?Example?>
+$form=$this->add('Form',null,'Demo');
+$form->addField('line','number_1');
+$form->addField('line','number_2');
+$form->addSubmit('Compare');
+
+if($form->isSubmitted()){
+	if($form->get('number_1') != $form->get('number_2'))
+		$form->displayError('number_2','Must be same');
+}
+<?/Example?>
+
+
+<?Example?>
+$form=$this->add('Form',null,'Demo');
+$form->addField('line','number_1');
+$form->addField('line','number_2');
+$form->addSubmit('Compare');
+
+if($form->isSubmitted()){
+	if($form->get('number_1') != $form->get('number_2'))
+		$form->displayError('number_2','Must be same');
+}
+<?/Example?>
