@@ -54,6 +54,11 @@ class Frontend extends ApiFrontend {
             ;
 
         $this->addLayout('UserMenu');
+
+        $r = $this->add("Controller_PatternRouter");
+        $r
+          ->addRule('=doc\/(.*)', "doc", array('doc'))
+          ->route();
     }
     function layout_UserMenu(){
         if($this->auth->isLoggedIn()){
