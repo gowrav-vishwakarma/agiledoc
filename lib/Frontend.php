@@ -8,7 +8,7 @@ class Frontend extends ApiFrontend {
         parent::init();
 
         // Keep this if you are going to use database on all pages
-        // $this->dbConnect();
+        $this->dbConnect();
         $this->requires('atk','4.2.0');
 
         // This will add some resources from atk4-addons, which would be located
@@ -51,7 +51,7 @@ class Frontend extends ApiFrontend {
 
         // If you are using a complex menu, you can re-define
         // it and place in a separate class
-        $this->add('Menu',null,'Menu')
+        $this->add('Menu_jUI',null,'Menu')
             ->addMenuItem('index','Welcome')   
             ;
 
@@ -62,6 +62,8 @@ class Frontend extends ApiFrontend {
           ->addRule('=doc\/(.*)', "doc", array('doc'))
           ->route();
     }
+
+
     function layout_UserMenu(){
         if($this->auth->isLoggedIn()){
             $this->add('Text',null,'UserMenu')
