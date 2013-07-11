@@ -1,0 +1,22 @@
+<?php
+class page_index extends Page {
+	function init(){
+		parent::init();
+
+<<<<<<< HEAD
+	
+=======
+		$this->add('documenting/View_Example')
+            ->set('
+            		$form=$this->add("Form",null,"Demo");
+            		$form->addField("line","var1");
+
+            		if($form->isSubmitted()){
+            			$form->displayError("var1","teri to ...");
+            		}
+
+            	');
+>>>>>>> b813107a95e609387467f33c774f2b3b7d28cd04
+
+	}
+}
