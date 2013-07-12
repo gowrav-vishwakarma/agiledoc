@@ -52,7 +52,7 @@
 <li>And your data structures move seamlessly between your data store and your AJAX interface.</li>
 </ul>
 
-<p><img title="Simplifying Rich Application Development" alt="Simplifying Rich Application Development" src="/agiletoolkit.org/public/images/doc/overview/dia-simplifying-development.png" style="" class="" id="agiletoolkit_org_doc_view_9">
+<p><img title="Simplifying Rich Application Development" alt="Simplifying Rich Application Development" src="<?template?>images/dia-simplifying-development.png<?/template?>" style="" class="" id="agiletoolkit_org_doc_view_9">
 </p>
 
 <h3>How is Agile Toolkit different?</h3>
@@ -86,7 +86,8 @@
 <style>.gutter a { text-decoration: none; }</style>
 <div class="atk-row ">
 <?Example?>
-$this->add('View_Info',null,'Demo')->set('Hi');
+$crud=$this->add('CRUD',null,'Demo');
+$crud->setModel('Member');
 <?/Example?>
 
 
@@ -99,14 +100,10 @@ $this->add('View_Info',null,'Demo')->set('Hi');
 
 <style>.gutter a { text-decoration: none; }</style>
 <div class="atk-row ">
-<div class="span6">	
-<div class="example" data-short="romaninsh_documenting_view_example_2" id="agiletoolkit_org_doc_romaninsh_documenting_view_example_2_ex">
-  <div class="label">SOURCE</div>
-  <div class="actions"><a href="#romaninsh_documenting_view_example_2" name="romaninsh_documenting_view_example_2"><i class="ui-icon ui-icon-link"></i>Link</a><a class="copy_link" href="javascript:void()"><i class="ui-icon ui-icon-document"></i>Copy</a></div>
-  <div class="syntaxhighlighter  " id="highlighter_402715"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><a href="#romaninsh_documenting_view_example_2_1" name="romaninsh_documenting_view_example_2_1"><div class="line number1 index0 alt2">1</div></a><a href="#romaninsh_documenting_view_example_2_2" name="romaninsh_documenting_view_example_2_2"><div class="line number2 index1 alt1">2</div></a></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="variable">$crud</code><code class="plain">-&gt;addPaginator(5);</code></div><div class="line number2 index1 alt1"><code class="variable">$crud</code><code class="plain">-&gt;addQuickSearch(</code><code class="keyword">array</code><code class="plain">(</code><code class="string">'name'</code><code class="plain">));</code></div></div></td></tr></tbody></table></div>
-</div>
-</div>
+<?Example?>
+$crud->grid->addPaginator(2);
 
+<?/Example?>
 
 
 </div>

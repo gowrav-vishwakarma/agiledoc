@@ -1,10 +1,14 @@
 <?php
 class page_doc extends Page {
     public $page;
+    public $ln;
 
     function initializeTemplate(){
-    	$this->api->stickyGET('doc');
+        $this->api->stickyGET('doc');
+    	$this->api->stickyGET('ln');
         list($this->page,$junk)=explode('.',$_GET['doc']);
+        $this->ln= $_GET['ln'];
+
         parent::initializeTemplate();
         
     }
@@ -25,7 +29,7 @@ class page_doc extends Page {
 
     
     function defaultTemplate(){
-        return array('docs/'.$this->page);
+        return array('docs'.$this->ln.'/'.$this->page);
     }
      
 }
