@@ -1,35 +1,43 @@
 <h2>Directory Structre Of Agiletoolkit</h2>
-    FOR LINUX OS:-
-<b><h5><u>www</u></h5></b>
-    FOR WINDOWS OS:-
-<h5><u>xamp->htdocs</u></h5>
-    " This is your WebRoot,where your project folder is stored."
-<b><h5>Application folder</h5></b>
-    " Your application will be stored in this folder."
-<ol start=1>
-<li><b><h5>atk4</h5></b>
-        " It is core part of the AgileToolkit." </li>
- <b><h5><li>atk4-addons</h5></b>
-        " It contains all the addtional features of AgileToolkit."</li>
- <b><h5><li>lib</h5></b>
-        " This is your library folder,where you can create your own required files & folders."</li>
-<ul><li>Frontend.php</li>
-        " This is your apiFrontend app class,which extends features of 'lib' file of 'atk4' folder."</li>
-    <li>Model</li> 
-        " Here you can create your own models files in this folder."</li>    
-    <li>View</li>
-        " Here you can set your own view files in this folder."</li>
-</ul>   
-<b><h5><li>page</h5></b> 
-    " This is 'page' folder,where you can create pages for your application."</li>
- <b><h5><li>docs</h5></b>
-    " This folder keeps track of your project documentation & SQL migration scripts."</li>
- <b><h5><li>templates</h5></b> 
-    " Here you can set your own template for your project custom UI templates."</li>
- <b><h5><li>index.php</h5></b>
-    " This is the main or default page of 'AgileToolkit which basically loads for bootstrapping."</li> 
- <b><h5><li>config-default.php</h5></b>      
-    " This is the default page,which holds basic settings and configuration."</li>
-<b><h5><li>config-distrib.php</h5></b>     
-    " This is the page,which keeps per-installation sensitive configuration."</li>
- </ol>
+The following is the base directory structure for agiletoolkit project. The structure shown here is from your project_root. For simplicity and to keep learning track faster, we are not taking every file and folder in details here. We will cover the remaining files and folders later in the course.
+
+<ul>
+    <li>
+        <h3>atk4</h3>
+        This is the main framework. You MUST not change any thing in here.
+    </li>
+    <li>
+        <h3>atk4-addons</h3>
+        This is extenssion to main framework. Various utilitites and extra features are managed in atk4-addons.
+    </li>
+    <li>
+        <h3>lib</h3>
+        This is your library folder. Before searching for any class in atk4 main framework the files and classes are searched here first. So here you will create your Models, View, Controllers or any class you want to add to the system. The following are main files and folders in this folder:
+        <ul>
+            <li>
+                <h4>Frontend.php</h4>
+                This is main application class. your main index file will create object of this class. Here you will define the locations to search for various files, database connectivity, Menus etc.
+            </li>
+            <li>
+                <h4>Model</h4>
+                This folder will contain your ORM Models.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h3>page</h3>
+        This folder will contain your main web pages. 
+    </li>
+    <li>
+        <h3>templates</h3>
+        This folder will contain your html part. This folder holds template for your complete website as wellas each indivisual visual element. This folder is searched for every required template first, if file is not found here, it is searched in main atk4 framework's template folder. 
+    </li>
+    <li>
+        <h3>index.php</h3>
+        This is main page that is called for any request to server. This page usually includes the framework bootstrap file and then creates application object defined in lib/Frontend.php file.
+    </li>
+    <li>
+        <h3>config-default.php</h3>
+        This is the default page, which holds basic settings and configuration.
+    </li>
+</ul>

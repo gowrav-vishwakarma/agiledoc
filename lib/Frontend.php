@@ -37,6 +37,7 @@ class Frontend extends ApiFrontend {
             ;
         $this->api->js(true)->univ()->image('.fancybox');
         $this->api->js(true)->univ()->youtube('.fancybox-media');
+        $this->api->js(true)->univ()->tooltip();
 
         // If you wish to restrict access to your pages, use BasicAuth class
         $this->add('BasicAuth')
@@ -56,7 +57,6 @@ class Frontend extends ApiFrontend {
         // it and place in a separate class
         $this->add('Menu_jUI',null,'Menu')
             ->addMenuItem('index','Welcome')   
-            ->addMenuItem('test','My Test')   
             ;
 
         $this->addLayout('UserMenu');
