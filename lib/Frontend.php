@@ -33,7 +33,10 @@ class Frontend extends ApiFrontend {
         $this->js()
             ->_load('atk4_univ')
             ->_load('ui.atk4_notify')
+            ->_load('lightbox')
             ;
+        $this->api->js(true)->univ()->image('.fancybox');
+        $this->api->js(true)->univ()->youtube('.fancybox-media');
 
         // If you wish to restrict access to your pages, use BasicAuth class
         $this->add('BasicAuth')
@@ -53,6 +56,7 @@ class Frontend extends ApiFrontend {
         // it and place in a separate class
         $this->add('Menu_jUI',null,'Menu')
             ->addMenuItem('index','Welcome')   
+            ->addMenuItem('test','My Test')   
             ;
 
         $this->addLayout('UserMenu');
