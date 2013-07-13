@@ -7,14 +7,67 @@
 		</li>
 		<li>
 			Create an index page in page folder.
+			<?Code?>
+			
+			class page_index extends Page{
+				function init(){
+					parent::init();
+				}
+			}
+				<?/Code?>
 		</li>
 	</ul>
 </p>
-
+<ol>
+<li>
 <?Code?>
-	echo "Hello-world";
+class page_index extends Page{	
+	function init(){
+			parent::init();
+			echo "Hello-world";
+		}
+	}
 <?/Code?>
 
-<p>But It Not The Right Way, It gives you output like<?image?><?/image?></p>
+	But It Not The Right Way, It gives you output like<?image_preview?>images/initialdevelopment/echoexample.png<?/image_preview?>
+</li>
+<li>Now We are Going do it in diffrent way
+<?Example?>
+$this->add('HelloWorld',null,'Demo');
+<?/Example?>
+In this Example we use class Helloworld. we add this <br/>
+class on Demo spot. Demo is spot in page default template.
+</li>
 
+<li>Or we can also do this like..
+<?Example?>
+$this->add('Text',null,'Demo')->set("Hello wolrd!");
+<?/Example?>
+</li>
+
+<li>Another way using View..
+	<?Example?>
+	$this->add('View',null,'Demo')->set('Hello World');
+	<?/Example?>
+
+	</li>
+<li>
+	So you complete Code is Like this, You can use any commented code.
+	<?Code?>
+	class page_index extends Page{
+				function init(){
+					parent::init();
+
+					//echo "Hello World";
+					//$this->add('HelloWorld');
+					//$this->add('Text')->set("Hello wolrd!");
+					//$this->add('View')->set('Hello World');
+				}
+			}
+	<?/Code?>
+</li>
+
+
+
+</ol>
 
