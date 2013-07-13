@@ -18,6 +18,10 @@ $.each({
 						buttons : {}
 					}
 				});
+    },
+
+    tooltip: function(){
+		$( document ).tooltip();
     }
 
 },$.univ._import);
