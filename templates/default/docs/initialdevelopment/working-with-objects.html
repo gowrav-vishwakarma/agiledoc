@@ -1,0 +1,32 @@
+<h1>Working with Objects</h1>
+<h2>Agiletoolkit is pure Object Oriented Framework</h2>
+
+<p>And this is definately a big plus to agiletoolkit that it is purly designed on Object Orieneted Concepts. This helps the system being very unique, and As the first rule of OOPS here also in agiletoolkit 'Everything is object'. From any Visual element on the screen to any Data in a tuple of a table is an object. Even javascript and the elements of jQuery or javascript are treated as Objects. 
+</p>
+<p>
+	<h3>What's new </h3>
+	<h4>Creating new Objects</h4>
+	you have ususally used the following syntext to create or add any new object in any scope.
+	<?Code?>
+		$x = new AnyClass(); // NOT USED: you will never use this way in agiletoolkit
+	<?/Code?>
+
+	For many new features and simplicity the above syntax is not used to create or add any new object in agiletoolkit. Instead we use the following syntax which serves the same.
+	<?Code?>
+		$x = $this->add('AnyClass'); // Here $this will define the owner of new object created
+		or
+		$x = $other_object->add('AnyClass'); // Here $other_object will be the owner of new object created
+	<?/Code?> 
+	<h4>Constructor Function</h4>
+	Agiletoolkit avoids use of default constructor, instead it uses its own function 'init' for various initialization purpose.
+	<?Code?>
+	class View_New extends View {
+		function init(){
+			parent::init();
+			// Your class initialization
+		}
+	}
+
+	$temp = $this->add('View_New');
+	<?/Code?> 
+</p>
