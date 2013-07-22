@@ -57,6 +57,7 @@ class Frontend extends ApiFrontend {
         // it and place in a separate class
         $this->add('Menu_jUI',null,'Menu')
             ->addMenuItem('index','Welcome')   
+            ->addMenuItem('test','My Test Page')   
             ;
 
         $this->addLayout('UserMenu');
